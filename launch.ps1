@@ -7,7 +7,7 @@ function Get-PolicyState {
     catch { return $null }
 }
 $policyState = Get-PolicyState
-if ($policyState -and ($policyState.app -ne 'AgriMatch Policy' -or $policyState.version -ne '2.7.0-policy.9')) {
+if ($policyState -and ($policyState.app -ne 'AgriMatch Policy' -or $policyState.version -ne '2.7.0-policy.9-home.1')) {
     throw "Port $Port is in use by another application. Choose another port using -Port."
 }
 if (-not $policyState) {

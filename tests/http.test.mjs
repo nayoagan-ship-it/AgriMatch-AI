@@ -13,12 +13,12 @@ test('the packaged server exposes the policy flow and removes old ranking interf
   try{
     await once(child.stdout,'data');
     const base='http://127.0.0.1:'+port;
-    const health=await(await fetch(base+'/health')).json();assert.equal(health.app,'AgriMatch Policy');
-    const html=await(await fetch(base)).text();assert.match(html,/农产品政策查询/);assert.doesNotMatch(html,/report-charts|ranking-view|scenario-core|print-report/);
+    const health=await(await fetch(base+'/health')).json();assert.equal(health.app,'AgriMatch Policy');assert.equal(health.version,'2.7.0-policy.9-home.1');
+    const html=await(await fetch(base)).text();assert.match(html,/农产品政策查询/);assert.match(html,/id="landing-start"/);assert.match(html,/让中国农产品/);assert.doesNotMatch(html,/report-charts|ranking-view|scenario-core|print-report/);
     for(const path of ['/ranking-view.js','/report-charts.js','/api/readiness','/api/backtest'])assert.equal((await fetch(base+path)).status,404);
     const config=await(await fetch(base+'/api/config')).json();assert.equal(config.catalog.countries.length,92);assert.equal(config.provinces.length,34);assert.equal(config.aiEnabled,false);assert.equal('weights' in config,false);
     assert.equal(config.evaluation,true);assert.match(html,/AI帮你选优/);assert.match(html,/evaluation-view/);
-    for(const path of ['/evaluation-ui.js','/evaluation.css'])assert.equal((await fetch(base+path)).status,200);
+    for(const path of ['/landing.js','/landing.css','/landing-hero.jpg','/evaluation-ui.js','/evaluation.css'])assert.equal((await fetch(base+path)).status,200);
     const response=await fetch(base+'/api/query',{method:'POST',headers:{'content-type':'application/json',origin:base},body:JSON.stringify({product:'绿茶',originProvince:'江苏省',form:'dried',countries:['JP','US','DE'],refresh:false})});
     const cookie=response.headers.get('set-cookie').split(';')[0];assert.equal(response.status,200);const{report}=await response.json();assert.equal(report.countries.length,3);assert.ok(report.countries.every(c=>!('score' in c)));
     const evaluationResponse=await fetch(base+'/api/evaluate',{method:'POST',headers:{'content-type':'application/json',origin:base,cookie},body:JSON.stringify({reportId:report.id,query:report.input})});

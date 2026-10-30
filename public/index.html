@@ -1,20 +1,94 @@
 <!doctype html>
-<html lang="zh-CN">
+<html lang="zh-CN" class="landing-visible">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>AgriMatch AI · 农产品政策查询</title>
+  <title>AgriMatch AI · 农业出海工作台</title>
   <meta name="description" content="按产品、中国省级原产地和目标国家，了解进口准入、关税、监管措施及政策变化。">
   <link rel="icon" href="/favicon.svg">
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/evaluation.css">
+  <link rel="stylesheet" href="/landing.css">
   <script type="module" src="/app.js"></script>
 </head>
 <body>
-<a class="skip-link" href="#main">跳到主要内容</a>
+<a class="skip-link" href="#landing-start">跳到主要内容</a>
+<div id="landing" class="landing" aria-label="AgriMatch 展示首页">
+  <section class="landing-hero">
+    <div class="landing-nav">
+      <a class="landing-brand" href="#home" data-view="home" aria-label="AgriMatch AI 开始界面"><span class="mark">A</span><span>AgriMatch <b>AI</b><small>农业出海工作台</small></span></a>
+      <nav class="landing-menu" aria-label="网站导航">
+        <a href="#about" data-scroll-to="#about">网站介绍</a>
+        <a href="#partners" data-scroll-to="#partners">合作伙伴</a>
+        <a href="#faq" data-scroll-to="#faq">常见问题</a>
+        <a href="#contact" data-scroll-to="#contact">联系我们</a>
+        <button type="button" id="landing-history" data-view="history" class="menu-cta">查询记录</button>
+      </nav>
+    </div>
+    <div class="landing-center">
+      <p class="landing-eyebrow">AGRICULTURE · GLOBAL MARKETS</p>
+      <h1>让中国农产品<br><em>找到对的市场</em></h1>
+      <p class="landing-sub">输入具体产品、中国产区与目标国家，先查看各国政策，再通过 AI 帮你选优，了解进口准入、物流、需求、收益与竞争条件。</p>
+      <button type="button" id="landing-start" data-view="query" class="landing-cta">立即开始 <span>↗</span></button>
+      <p class="landing-hint">从具体产品出发 · 自动核实依据 · 未知条件分类讨论</p>
+    </div>
+  </section>
+
+  <section id="about" class="landing-section">
+    <div class="landing-section-head"><p class="kicker">WEBSITE INTRO</p><h2>从产品信息到市场判断</h2><p>面向中国农产品出海场景的工作台：先了解各国政策，再结合官方统计与实际产品条件，逐项核对机会、限制和下一步需确认的资料。</p></div>
+    <div class="landing-cards">
+      <article class="landing-card"><h3>六类政策，逐国查看</h3><p>进口准入与官方立场、关税与配额、监管要求、原产地专项政策、进口支持与产业政策、近期变化。点击模块查看分类结果、官方原文与分析。</p></article>
+      <article class="landing-card"><h3>自动核实，保留依据</h3><p>按产品、加工形态、原产地和国家检索官方资料，标注来源、时间与适用范围。没有取得专项依据时说明缺口，不把一般规则当作本批次已获准入。</p></article>
+      <article class="landing-card"><h3>AI 帮你选优</h3><p>从进口准入、物流可行性、市场需求、收益空间与竞争情况五方面整理评价；未知条件按“如果 → 那么 → 需确认材料”分类讨论，支持补充资料、返回修改与下载。</p></article>
+    </div>
+    <div class="landing-stats">
+      <div><b>92</b><span>可选国家</span></div>
+      <div><b>34</b><span>中国省级原产地</span></div>
+      <div><b>6</b><span>政策模块</span></div>
+      <div><b>5</b><span>评价维度</span></div>
+      <div><b>6</b><span>大洲覆盖</span></div>
+    </div>
+  </section>
+
+  <section id="partners" class="landing-section">
+    <div class="landing-section-head"><p class="kicker">DATA &amp; TECH SOURCES</p><h2>合作伙伴与数据来源</h2><p>公开资料与技术来源分别标注，具体引用和适用条件在查询结果中查看。</p></div>
+    <div class="landing-cards">
+      <article class="landing-card"><h3>各国官方主管机构 <span class="tag">政策依据</span></h3><p>海关、农业、食品监管等官方渠道，提供进口准入、检疫、税则与监管原文；按产品和原产地逐项核对。</p></article>
+      <article class="landing-card"><h3>WTO 法规通知 <span class="tag">政策变化</span></h3><p>辅助查找产品法规与近期通知，分别说明通知、草案与已生效文件，保留对应来源。</p></article>
+      <article class="landing-card"><h3>WITS / UN Comtrade <span class="tag">贸易统计</span></h3><p>同一商品统计范围下的历史进口、重量与来源国背景。年度与覆盖范围单独说明，统计均价不作为采购报价。</p></article>
+      <article class="landing-card"><h3>可选 AI 整理服务 <span class="tag">内容分析</span></h3><p>结合已取得的官方正文整理中文结论与适用条件；基础检索、计算与分类讨论可独立使用。</p></article>
+    </div>
+    <p class="landing-note">以上为数据与技术来源说明，不代表商业合作、赞助或背书。可选国家数量不代表全部产品专项政策均已核实。</p>
+  </section>
+
+  <section id="faq" class="landing-section">
+    <div class="landing-section-head"><p class="kicker">FAQ</p><h2>常见问题</h2><p>关于查询、评价、数据与记录的使用说明。</p></div>
+    <div class="landing-faq">
+      <details open><summary>从哪里开始使用？</summary><p>点击“立即开始”，填写具体产品、产品形态、中国省级原产地和目标国家。提交后先显示各国政策，再点击“AI帮你选优”查看五项评价。</p></details>
+      <details><summary>没有启用外部模型可以使用吗？</summary><p>可以。官方资料检索、原文读取、统计查询、计算与分类讨论均可使用；外部模型用于可选的官方原文整理，具体启用状态可在工作台“使用说明”中查看。</p></details>
+      <details><summary>支持哪些国家和组织分组？</summary><p>目录支持92个国家，六个大洲各有10个常用国家；可通过一带一路、上合组织、东盟和欧盟等分组选择。分组本身不代表进口准入或关税优惠。</p></details>
+      <details><summary>资料不完整时会怎样评价？</summary><p>能核实的列出依据与适用范围；不能确认的按“如果 → 那么 → 需确认材料”分类讨论。缺失报价、成本与运输条件保留未知，不生成综合分或国家排名。</p></details>
+      <details><summary>查询与评价结果可以保存吗？</summary><p>政策摘要与评价结果可以分别下载。查询记录及填写的资料保存在当前浏览器，支持重新查看、返回修改；清除浏览器数据会清除这些记录。</p></details>
+      <details><summary>这些结果能确认具体货物已获准入吗？</summary><p>一般监管规则与历史贸易记录不能代替具体产品、企业和批次的资格确认。查询结果会列出适用条件、专项依据和需继续核实的材料。</p></details>
+    </div>
+  </section>
+
+  <section id="contact" class="landing-section">
+    <div class="landing-section-head"><p class="kicker">CONTACT</p><h2>联系我们</h2><p>欢迎就演示、数据核验与后续合作与我们联系。</p></div>
+    <div class="landing-contact">
+      <article class="landing-card"><h3>项目与演示</h3><p>比赛演示、路演邀请与项目合作。<br>邮箱：<a href="mailto:3468595801@qq.com">3468595801@qq.com</a></p></article>
+      <article class="landing-card"><h3>数据与方法</h3><p>展开各国政策模块和评价维度，可查看对应原文、数据来源、核对时间与适用范围。</p></article>
+      <article class="landing-card"><h3>使用反馈</h3><p>发现分类错误、数据缺失或结论偏差，欢迎反馈具体产品、产区与截图，便于我们复核与修正。</p></article>
+    </div>
+    <p class="landing-note">本站为比赛演示项目，报告结论用于需求初筛与行动参考，不构成投资、贸易或法律建议。</p>
+  </section>
+
+  <footer class="landing-footer"><span><b>AgriMatch AI</b> · 农业出海工作台</span><p>让中国农产品更精准地连接世界市场</p><small>政策依据 · 条件评价 · 分类讨论</small></footer>
+</div>
+
 <header class="site-header">
-  <a class="brand" href="#query" data-view="query" aria-label="AgriMatch AI 首页"><span class="brand-mark">A</span><span>AgriMatch <b>AI</b><small>农产品政策查询</small></span></a>
-  <nav aria-label="主导航"><button type="button" class="nav-link active" data-view="query" aria-current="page">政策查询</button><button type="button" class="nav-link" data-view="history">查询记录<span id="history-count" class="nav-count" hidden></span></button><button type="button" class="nav-link" id="open-about">使用说明</button></nav>
+  <a class="brand" href="#home" data-view="home" aria-label="返回 AgriMatch 展示首页"><span class="brand-mark">A</span><span>AgriMatch <b>AI</b><small>农产品政策查询</small></span></a>
+  <nav aria-label="主导航"><button type="button" class="nav-link" data-view="home">首页</button><button type="button" class="nav-link active" data-view="query" aria-current="page">政策查询</button><button type="button" class="nav-link" data-view="history">查询记录<span id="history-count" class="nav-count" hidden></span></button><button type="button" class="nav-link" id="open-about">使用说明</button></nav>
 </header>
 <main id="main" tabindex="-1">
   <section id="query-view" class="view">

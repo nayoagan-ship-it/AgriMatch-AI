@@ -1,10 +1,11 @@
 import {createEvaluationUI} from '/evaluation-ui.js';
+import {initLanding,setLandingVisible} from '/landing.js';
 const $=id=>document.getElementById(id);
 const esc=value=>String(value??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const link=value=>{try{const u=new URL(value);return u.protocol==='https:'&&!u.username&&!u.password?u.href:'';}catch{return '';}};
 const date=value=>{if(!value)return '未注明';const d=new Date(value);return Number.isNaN(d.getTime())?'未注明':new Intl.DateTimeFormat('zh-CN',{timeZone:'Asia/Shanghai',year:'numeric',month:'2-digit',day:'2-digit',hour:'2-digit',minute:'2-digit',hour12:false}).format(d);};
 const STORAGE='agrimatch-policy-history-v2',DRAFT='agrimatch-policy-draft-v2';
-let config,selected=['JP','US','DE'],pickerSelected=[],pickerMode='continents',activeGroup='bri',visibleCountryIds=[],currentReport=null,controller=null,view='query',history=[],toastTimer;
+let config,selected=['JP','US','DE'],pickerSelected=[],pickerMode='continents',activeGroup='bri',visibleCountryIds=[],currentReport=null,controller=null,view='home',history=[],toastTimer;
 let evaluationUI;
 const scrollPositions={};
 const safeRead=(key,fallback)=>{try{return JSON.parse(localStorage.getItem(key))??fallback;}catch{return fallback;}};
@@ -12,16 +13,20 @@ function saveDraft(){try{localStorage.setItem(DRAFT,JSON.stringify(input()));}ca
 function toast(message){$('toast').textContent=message;$('toast').hidden=false;clearTimeout(toastTimer);toastTimer=setTimeout(()=>{$('toast').hidden=true;},3500);}
 function input(){return {product:$('product').value.trim(),form:$('form').value,originProvince:$('origin').value,notes:$('notes').value.trim(),milletKind:$('millet-kind').value,category:config?.catalog.products.find(p=>p.name===$('product').value.trim())?.category||'other',countries:[...selected],refresh:true};}
 function changeView(next,{scroll=true,restore=false,historyMove=false}={}){
-  if(!['query','results','evaluation','history'].includes(next))next='query';
+  if(!['home','query','results','evaluation','history'].includes(next))next='query';
   if(['results','evaluation'].includes(next)&&!currentReport)next='query';
   if(view!==next)scrollPositions[view]=window.scrollY;
+  const previousView=view;
   view=next;
+  setLandingVisible(next==='home');
   for(const id of ['query','results','evaluation','history'])$(id+'-view').hidden=id!==next;
   document.body.dataset.view=next;
   document.querySelectorAll('.nav-link[data-view]').forEach(b=>{const active=b.dataset.view===(['results','evaluation'].includes(next)?'query':next);b.classList.toggle('active',active);if(active)b.setAttribute('aria-current','page');else b.removeAttribute('aria-current');});
   if(next==='history')renderHistory();
   if(!historyMove&&window.history.state?.view!==next)window.history.pushState({view:next},'',next==='query'?'#query':'#'+next);
   if(scroll)window.scrollTo({top:restore?(scrollPositions[next]||0):0,behavior:'instant'});
+  if(next==='home')$('landing-start').focus({preventScroll:true});
+  else if(next==='query'&&previousView==='home')$('product').focus({preventScroll:true});
 }
 function countryName(id){return config.catalog.countries.find(c=>c.id===id)?.name||id;}
 function renderSelection(){
@@ -275,10 +280,14 @@ async function init(){
     const saved=safeRead(STORAGE,[]);history=Array.isArray(saved)?saved.filter(validReport).slice(0,20):[];updateHistoryCount();
     $('model-status').textContent=config.aiEnabled?'已启用官方原文的AI整理；具体条文需要匹配产品并附对应原文。':'当前可查看官方一般规则、联网获取原文与查询入口；产品专项条文的AI整理需配置服务端模型。';
     $('submit-query').disabled=false;
+    if(view==='history')renderHistory();
   }catch{$('form-error').textContent='页面配置暂未加载，请刷新后重试。';$('form-error').hidden=false;$('query-status').textContent='等待配置加载。';}
 }
 $('product').addEventListener('input',()=>{$('millet-field').hidden=!/小米|谷子|黍米|millet/i.test($('product').value);});
 evaluationUI=createEvaluationUI({onPolicyReport:r=>{renderReport(r,{update:true});remember(r);},getReport:()=>currentReport,onView:changeView,onRemember:remember,onToast:toast,getPolicyCountry:()=>document.querySelector('[data-country-tab][aria-pressed="true"]')?.dataset.countryTab,onInput:()=>{changeView('query',{restore:true});$('product').focus({preventScroll:true});},onPolicy:id=>{changeView('results',{restore:!id});if(id){document.querySelectorAll('[data-country-tab]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.countryTab===id)));document.querySelectorAll('[data-country-report]').forEach(el=>el.hidden=el.dataset.countryReport!==id);const card=[...document.querySelectorAll('[data-module]')].find(el=>el.dataset.module===id+':posture');if(card){card.open=true;card.scrollIntoView({block:'start',behavior:'instant'});card.querySelector('summary')?.focus({preventScroll:true});}}}});
-window.history.replaceState({view:'query'},'','#query');
-window.addEventListener('popstate',event=>{const next=event.state?.view||'query';if(next==='evaluation'&&currentReport)evaluationUI.open({historyMove:true});else changeView(next,{historyMove:true,restore:true});});
+initLanding();
+const initialView=['query','history'].includes(location.hash.slice(1))?location.hash.slice(1):'home';
+window.history.replaceState({view:initialView},'',initialView==='home'?location.pathname+location.search:'#'+initialView);
+changeView(initialView,{historyMove:true,scroll:false});
+window.addEventListener('popstate',event=>{const next=event.state?.view||'home';if(next==='evaluation'&&currentReport)evaluationUI.open({historyMove:true});else changeView(next,{historyMove:true,restore:true});});
 await init();

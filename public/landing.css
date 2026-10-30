@@ -1,0 +1,88 @@
+/* 网站开始界面（落地页）：主视觉 + 顶部导航 + 中央按钮 + 介绍/合作伙伴/常见问题/联系我们 */
+:root{
+  --lg-navy:#06172c;--lg-navy-2:#0b2340;--lg-ink:#173142;--lg-body:#41586b;
+  --lg-green:#2f6b4f;--lg-green-dark:#1d4a37;--lg-lime:#c8e26a;--lg-line:#dde5d8;--lg-paper:#ffffff;--lg-soft:#f2f6ee;
+}
+html.landing-visible body>header,html.landing-visible body>main,html.landing-visible body>footer,
+html.landing-visible #app-sidebar,html.landing-visible #sidebar-toggle,html.landing-visible #sidebar-overlay{display:none!important}
+/* 侧边栏布局给 body 预留了左内边距，开始界面需要占满整屏 */
+html.landing-visible body{padding-left:0!important;padding-right:0!important}
+html.app-direct .landing{display:none!important}
+.landing{position:relative;z-index:20;background:var(--lg-soft);color:var(--lg-ink)}
+.landing a{color:inherit;text-decoration:none}
+
+/* ---------- 主视觉 ---------- */
+.landing-hero{position:relative;min-height:100vh;min-height:100svh;display:flex;flex-direction:column;
+  background:var(--lg-navy) url('/landing-hero.jpg') center/cover no-repeat;padding:0 clamp(18px,4vw,56px) clamp(46px,7vh,86px)}
+.landing-hero::after{content:'';position:absolute;inset:0;pointer-events:none;
+  background:radial-gradient(120% 82% at 50% 60%,rgba(4,16,32,.6) 0%,rgba(4,16,32,.34) 44%,rgba(4,16,32,0) 74%)}
+.landing-nav{position:relative;z-index:2;display:flex;align-items:center;justify-content:space-between;gap:20px;padding:20px 0}
+.landing-brand{display:flex;align-items:center;gap:11px;color:#fff;font-size:19px;font-weight:600;letter-spacing:-.4px;white-space:nowrap}
+.landing-brand .mark{width:38px;height:38px;border-radius:12px;background:linear-gradient(140deg,#8fd05a,#2f6b4f);display:grid;place-items:center;color:#06281a;font-size:20px;font-weight:700}
+.landing-brand small{display:block;font-size:10px;font-weight:400;letter-spacing:1.4px;color:#b9cfe0;margin-top:2px}
+.landing-menu{display:flex;align-items:center;gap:clamp(10px,1.6vw,26px);flex-wrap:wrap;justify-content:flex-end}
+.landing-menu a,.landing-menu button{background:none;border:0;color:#e6eef6;font-size:13.5px;padding:8px 2px;letter-spacing:.3px;
+  border-bottom:2px solid transparent;transition:border-color .18s,color .18s}
+.landing-menu a:hover,.landing-menu button:hover{color:#fff;border-bottom-color:var(--lg-lime)}
+.landing-menu .menu-cta{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.28);border-radius:999px;padding:8px 16px}
+.landing-menu .menu-cta:hover{background:rgba(200,226,106,.2);border-color:var(--lg-lime);border-bottom-color:var(--lg-lime)}
+
+.landing-center{position:relative;z-index:2;margin:auto;text-align:center;color:#fff;max-width:880px;padding:clamp(30px,6vh,70px) 0}
+.landing-eyebrow{font-size:11px;letter-spacing:3px;color:var(--lg-lime);font-weight:600;margin-bottom:16px}
+.landing-center h1{font-size:clamp(28px,4.6vw,54px);line-height:1.28;font-weight:600;letter-spacing:-.8px;margin:0 0 16px;text-shadow:0 2px 26px rgba(0,0,0,.42)}
+.landing-center h1 em{font-style:normal;color:var(--lg-lime)}
+.landing-sub{font-size:clamp(13px,1.35vw,17px);line-height:1.9;color:#dbe7f1;max-width:660px;margin:0 auto 34px;text-shadow:0 1px 14px rgba(0,0,0,.5)}
+.landing-cta{display:inline-flex;align-items:center;gap:12px;border:0;cursor:pointer;
+  font-size:clamp(15px,1.5vw,19px);font-weight:700;letter-spacing:.6px;color:#06281a;
+  background:linear-gradient(135deg,#d7ef86 0%,#9ed45f 42%,#5aa96a 100%);
+  padding:18px 46px;border-radius:999px;box-shadow:0 14px 34px rgba(6,40,26,.42),0 0 0 1px rgba(255,255,255,.22) inset;
+  transition:transform .18s ease,box-shadow .18s ease}
+.landing-cta:hover{transform:translateY(-2px) scale(1.014);box-shadow:0 20px 40px rgba(6,40,26,.5),0 0 0 1px rgba(255,255,255,.3) inset}
+.landing-cta:active{transform:translateY(0) scale(.995)}
+.landing-cta span{font-size:.9em}
+.landing-hint{margin-top:16px;font-size:11.5px;color:#a9c0d3;letter-spacing:.4px}
+
+/* ---------- 下方内容区 ---------- */
+.landing-section{max-width:1120px;margin:0 auto;padding:clamp(46px,7vw,84px) clamp(18px,4vw,40px)}
+.landing-section+.landing-section{padding-top:0}
+.landing-section-head{margin-bottom:26px}
+.landing-section-head .kicker{font-size:10px;letter-spacing:2.6px;color:#7f9184;font-weight:700;margin-bottom:9px}
+.landing-section-head h2{font-size:clamp(20px,2.3vw,29px);font-weight:600;color:var(--lg-green-dark);letter-spacing:-.4px;margin:0}
+.landing-section-head p{margin:10px 0 0;color:var(--lg-body);font-size:14px;line-height:1.9;max-width:760px}
+.landing-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(252px,1fr));gap:16px}
+.landing-card{background:var(--lg-paper);border:1px solid var(--lg-line);border-radius:16px;padding:22px 22px 20px}
+.landing-card h3{margin:0 0 9px;font-size:15.5px;color:var(--lg-green-dark)}
+.landing-card p{margin:0;color:var(--lg-body);font-size:13px;line-height:1.92}
+.landing-card ul{margin:9px 0 0;padding-left:17px;color:var(--lg-body);font-size:13px;line-height:1.9}
+.landing-stats{display:flex;gap:26px;flex-wrap:wrap;margin-top:22px}
+.landing-stats div{min-width:120px}
+.landing-stats b{display:block;font-size:25px;color:var(--lg-green);letter-spacing:-.5px}
+.landing-stats span{font-size:11.5px;color:#7f9184}
+.landing-note{margin-top:18px;font-size:11.5px;color:#7f9184;line-height:1.85}
+.landing-faq{display:grid;gap:12px}
+.landing-faq details{background:var(--lg-paper);border:1px solid var(--lg-line);border-radius:14px;padding:16px 20px}
+.landing-faq summary{cursor:pointer;font-size:14.5px;font-weight:600;color:var(--lg-green-dark);list-style:none}
+.landing-faq summary::-webkit-details-marker{display:none}
+.landing-faq summary::before{content:'＋';color:#8fae76;margin-right:9px;font-weight:700}
+.landing-faq details[open] summary::before{content:'－'}
+.landing-faq p{margin:11px 0 0;color:var(--lg-body);font-size:13px;line-height:1.92}
+.landing-contact{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px}
+.landing-contact .landing-card h3{display:flex;align-items:center;gap:8px}
+.landing-card .tag{display:inline-block;font-size:10.5px;color:#5d7250;background:#eef5e4;border-radius:999px;padding:2px 9px;margin-left:2px}
+.landing-footer{background:var(--lg-navy);color:#a9c0d3;padding:26px clamp(18px,4vw,56px);display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:12px}
+.landing-footer b{color:#fff;font-weight:600}
+@media(max-width:720px){
+  .landing-nav{flex-direction:column;align-items:flex-start;gap:12px}
+  .landing-menu{justify-content:flex-start;gap:14px}
+  .landing-menu a,.landing-menu button{font-size:12.5px}
+  .landing-center{padding-top:26px}
+  .landing-cta{width:100%;justify-content:center;padding:17px 26px}
+  .landing-stats{gap:16px}
+}
+
+/* Keep the original 2.4 home isolated from the policy workbench. */
+.landing .landing-brand{color:#fff}
+.landing-footer small{font-size:12px;margin:0;color:inherit}
+html.landing-visible .skip-link{z-index:100}
+.landing-section-head h2:focus{outline-offset:6px}
+@media(prefers-reduced-motion:reduce){.landing *{scroll-behavior:auto!important;transition:none!important}}

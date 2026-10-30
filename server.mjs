@@ -9,7 +9,7 @@ import {deploymentConfig,checkAccess,viewerSession} from './deployment.mjs';
 const root=path.dirname(fileURLToPath(import.meta.url));
 const port=Number(process.env.PORT||3327),config=modelConfig();
 const deployment=deploymentConfig();
-const files={'/':['index.html','text/html'],'/app.js':['app.js','text/javascript'],'/evaluation-ui.js':['evaluation-ui.js','text/javascript'],'/style.css':['style.css','text/css'],'/evaluation.css':['evaluation.css','text/css'],'/landing-hero.jpg':['landing-hero.jpg','image/jpeg'],'/favicon.svg':['favicon.svg','image/svg+xml']};
+const files={'/':['index.html','text/html'],'/landing.js':['landing.js','text/javascript'],'/landing.css':['landing.css','text/css'],'/app.js':['app.js','text/javascript'],'/evaluation-ui.js':['evaluation-ui.js','text/javascript'],'/style.css':['style.css','text/css'],'/evaluation.css':['evaluation.css','text/css'],'/landing-hero.jpg':['landing-hero.jpg','image/jpeg'],'/favicon.svg':['favicon.svg','image/svg+xml']};
 const headers={'cache-control':'no-store','x-content-type-options':'nosniff','referrer-policy':'no-referrer','content-security-policy':"default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'self'; base-uri 'none'; frame-ancestors 'none'; form-action 'self'"};
 function json(res,status,data){if(res.destroyed)return;res.writeHead(status,{...headers,'content-type':'application/json; charset=utf-8'});res.end(JSON.stringify(data));}
 async function body(req,max=16000){let size=0;const parts=[];for await(const part of req){size+=part.length;if(size>max)throw new InputError('查询内容过长。');parts.push(part);}try{const raw=JSON.parse(Buffer.concat(parts).toString('utf8'));if(!raw||typeof raw!=='object'||Array.isArray(raw))throw new Error();return raw;}catch{throw new InputError('查询内容格式无效。');}}
@@ -36,7 +36,7 @@ export const server=http.createServer(async(req,res)=>{
   const viewer=viewerSession(req,res,deployment),key=id=>viewer+':'+id;
   try{
     if(req.method==='GET'&&files[url.pathname]){const[file,type]=files[url.pathname];res.writeHead(200,{...headers,'content-type':type+(type.startsWith('text/')?'; charset=utf-8':'')});return res.end(await readFile(path.join(root,'public',file)));}
-    if(req.method==='GET'&&url.pathname==='/health')return json(res,200,{ok:true,app:'AgriMatch Policy',version:'2.7.0-policy.9',aiEnabled:config.enabled,evaluation:true});
+    if(req.method==='GET'&&url.pathname==='/health')return json(res,200,{ok:true,app:'AgriMatch Policy',version:'2.7.0-policy.9-home.1',aiEnabled:config.enabled,evaluation:true});
     if(req.method==='GET'&&url.pathname==='/api/config')return json(res,200,publicConfig(config));
     if(req.method==='POST'&&url.pathname==='/api/evaluate'){
       if(!req.headers['content-type']?.startsWith('application/json'))return json(res,415,{error:'需要JSON评价内容。'});
