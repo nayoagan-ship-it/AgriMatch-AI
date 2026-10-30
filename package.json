@@ -1,0 +1,14 @@
+{
+  "name": "agrimatch-ai",
+  "version": "2.7.0-policy.9",
+  "private": true,
+  "license": "MIT",
+  "type": "module",
+  "description": "基于AgriMatch 2.7的各国政策与AI条件评价版",
+  "scripts": {
+    "start": "node --env-file-if-exists=.env server.mjs",
+    "test": "node --test tests/*.test.mjs",
+    "check": "node --check server.mjs && node --check public/app.js && node --check public/evaluation-ui.js"
+  },
+  "engines": {"node": ">=22.13"}
+}

@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>AgriMatch AI · 农产品政策查询</title>
+  <meta name="description" content="按产品、中国省级原产地和目标国家，了解进口准入、关税、监管措施及政策变化。">
+  <link rel="icon" href="/favicon.svg">
+  <link rel="stylesheet" href="/style.css">
+  <link rel="stylesheet" href="/evaluation.css">
+  <script type="module" src="/app.js"></script>
+</head>
+<body>
+<a class="skip-link" href="#main">跳到主要内容</a>
+<header class="site-header">
+  <a class="brand" href="#query" data-view="query" aria-label="AgriMatch AI 首页"><span class="brand-mark">A</span><span>AgriMatch <b>AI</b><small>农产品政策查询</small></span></a>
+  <nav aria-label="主导航"><button type="button" class="nav-link active" data-view="query" aria-current="page">政策查询</button><button type="button" class="nav-link" data-view="history">查询记录<span id="history-count" class="nav-count" hidden></span></button><button type="button" class="nav-link" id="open-about">使用说明</button></nav>
+</header>
+<main id="main" tabindex="-1">
+  <section id="query-view" class="view">
+    <div class="query-layout">
+      <div class="query-intro">
+        <p class="eyebrow"><span class="tiny-line"></span> AGRICULTURE · TRADE POLICY</p>
+        <h1>把各国政策，<br><em>看明白。</em></h1>
+        <p class="intro-copy">你的农产品，面对怎样的进口政策？<br>选择产品与国家，查看政策概况及官方依据。</p>
+        <div class="intro-topics"><span>进口准入</span><span>关税与配额</span><span>监管措施</span><span>政策变化</span></div>
+        <figure class="agriculture-photo"><img src="/landing-hero.jpg" alt="农业田野与农产品" width="800" height="440"><figcaption><span>从具体产品出发</span><span>连接官方政策信息 ↗</span></figcaption></figure>
+      </div>
+      <section class="query-card" aria-labelledby="query-title">
+        <div class="card-heading"><div><p class="eyebrow">START YOUR QUERY</p><h2 id="query-title">想了解什么产品？</h2></div><span class="edition-label">政策查询版</span></div>
+        <form id="query-form">
+          <label class="field product-field">具体产品<span class="required-label">必填</span><input id="product" name="product" list="product-options" maxlength="100" placeholder="例如：绿茶、小麦、鲜苹果" autocomplete="off" required><datalist id="product-options"></datalist></label>
+          <label id="millet-field" class="field" hidden>小米的具体形态<select id="millet-kind"><option value="auto">按产品名称和说明识别（请确认）</option><option value="hulled">去壳食用小米粒</option><option value="whole">带壳谷子，非种用</option><option value="flour">小米粉</option><option value="prepared">熟制、即食或混合食品</option></select><small class="field-hint">去壳、原粮、磨粉和熟制可能采用不同税目与检疫要求。</small></label>
+          <div class="field-row">
+            <label class="field">产品形态<select id="form" name="form" required><option value="">请选择</option></select></label>
+            <label class="field">原产地<select id="origin" name="originProvince" required><option value="">选择省级行政区</option></select><small class="field-hint">中国 · 省 / 自治区 / 直辖市 / 特别行政区</small></label>
+          </div>
+          <div class="field country-field"><div class="field-label"><span id="countries-label">目标国家</span><button id="choose-countries" type="button" class="text-button">选择国家 <span aria-hidden="true">＋</span></button></div><div id="selected-countries" class="selected-countries" role="group" aria-labelledby="countries-label"></div><p class="field-hint">可选择多个国家，结果按选择顺序并列呈现。</p></div>
+          <details id="more-input" class="optional-input"><summary>补充产品细节 <span>可选 · 成分或加工说明</span></summary><div class="optional-fields">
+            <label class="field">成分或加工说明<textarea id="notes" name="notes" maxlength="800" rows="3" placeholder="例如：纯茶叶、无添加、经过干燥加工"></textarea></label>
+          </div></details>
+          <div class="auto-search-note"><span class="auto-search-dot" aria-hidden="true"></span><span><strong>自动联网搜索补充</strong><small>每次按产品和国家检索官方资料；能核实的列依据，不能确认的自动分类讨论。</small></span></div>
+          <p id="form-error" class="error-message" role="alert" hidden></p>
+          <div class="submit-row"><button id="submit-query" class="primary-button" type="submit">查看各国政策 <span aria-hidden="true">↗</span></button><button id="cancel-query" class="secondary-button" type="button" hidden>取消查询</button></div>
+          <p id="query-status" class="query-status" role="status" aria-live="polite">填写产品信息后即可开始。</p>
+        </form>
+      </section>
+    </div>
+    <div class="source-strip"><span class="source-label">查询依据</span><span>各国官方主管机构</span><span>海关与税则</span><span>WTO 产品法规通知</span><span class="source-tail">官方依据与适用条件分别展示</span></div>
+  </section>
+
+  <section id="results-view" class="view" hidden aria-labelledby="results-title">
+    <nav class="flow-steps" aria-label="当前流程"><span>01 产品信息</span><span aria-hidden="true">→</span><strong aria-current="step">02 各国政策</strong><span aria-hidden="true">→</span><span>03 AI评价</span></nav>
+    <div class="result-heading"><div><p class="eyebrow">PRODUCT POLICY BRIEF</p><h1 id="results-title">各国政策概况</h1><p id="report-context" class="result-context"></p></div><div class="result-actions"><button id="open-evaluation" type="button" class="primary-button">AI帮你选优 <span aria-hidden="true">↗</span></button><button id="edit-query" type="button" class="secondary-button">返回输入页</button><button id="refresh-report" type="button" class="secondary-button">重新联网补充</button><button id="download-report" type="button" class="secondary-button">下载摘要</button></div></div>
+    <div id="auto-search-status" class="auto-search-status" role="status" aria-live="polite"><span id="auto-search-text">自动检索准备中</span><button id="stop-research" type="button" class="text-button" hidden>停止检索</button></div>
+    <div id="report-note" class="report-note"></div>
+    <div class="results-toolbar"><div id="country-tabs" class="country-tabs" role="group" aria-label="查看国家"></div><button id="toggle-comparison" type="button" class="text-button" aria-expanded="false" aria-controls="comparison-panel">并列对照</button></div>
+    <section id="comparison-panel" class="comparison-panel" hidden><div class="comparison-scroll" tabindex="0" aria-label="各国政策对照表，可横向滚动"><table id="comparison-table"></table></div></section>
+    <div id="country-reports"></div>
+  </section>
+
+  <section id="evaluation-view" class="view" hidden aria-labelledby="evaluation-title">
+    <nav class="flow-steps" aria-label="当前流程"><span>01 产品信息</span><span aria-hidden="true">→</span><span>02 各国政策</span><span aria-hidden="true">→</span><strong aria-current="step">03 AI评价</strong></nav>
+    <div class="result-heading"><div><p class="eyebrow">EVIDENCE · CONDITIONS · NEXT STEPS</p><h1 id="evaluation-title" tabindex="-1">AI帮你选优</h1><p id="evaluation-context" class="result-context"></p></div><div class="result-actions"><button id="evaluation-back-policy" type="button" class="primary-button">返回政策页</button><button id="evaluation-back-input" type="button" class="secondary-button">返回输入页</button><button id="evaluation-refresh" type="button" class="secondary-button">更新评价</button><button id="evaluation-download" type="button" class="secondary-button" disabled>下载评价</button></div></div>
+    <p class="evaluation-intro">每次查询自动补充政策、年度进口和供应来源。能核实的列出依据与适用范围，不能确认的按不同情形说明条件、结果和需补材料。</p>
+    <div class="evaluation-statusbar"><p id="evaluation-status" role="status" aria-live="polite">正在整理评价资料…</p><button id="evaluation-cancel" type="button" class="text-button" hidden>停止评价</button></div>
+    <p id="evaluation-policy-update" class="evaluation-update" hidden>政策页有新资料，点击“更新评价”可重新整理。</p>
+    <p id="evaluation-error" class="error-message" role="alert" hidden></p>
+    <div id="evaluation-content"></div>
+    <details id="evaluation-supplement" class="evaluation-supplement">
+      <summary>补充运输与报价资料 <span>可选 · 让物流与收益判断更具体</span></summary>
+      <form id="evaluation-form">
+        <p class="field-hint">只填写已知信息，留空表示未知。金额统一为美元/公斤，填写本单由出口方承担的费用；明确没有的费用可以填0。</p>
+        <label class="field">为哪个国家补充<select id="evaluation-condition-country"></select></label>
+        <h2>运输资料</h2>
+        <label class="field">运输方案<input name="route" maxlength="180" placeholder="例如：已询价的空运路线及必要温控方案"></label>
+        <div class="field-row"><label class="field">剩余保质期（天）<input name="remainingDays" type="number" min="0" max="1000000000" step="any" inputmode="decimal"></label><label class="field">完整交付耗时（天）<input name="totalDays" type="number" min="0" max="1000000000" step="any" inputmode="decimal"><small class="field-hint">含运输、清关、仓储及最低销售期</small></label></div>
+        <label class="field">必要温控条件<select name="temperature"><option value="unknown">尚未核实</option><option value="ready">必要温控已落实</option><option value="not-required">已核对无需特殊温控</option><option value="unavailable">必要温控暂时无法落实</option></select></label>
+        <h2>报价与费用</h2>
+        <div class="field-row"><label class="field">采购报价<input name="buyerPrice" type="number" min="0" max="1000000000" step="any" inputmode="decimal"></label><label class="field">货物成本<input name="goodsCost" type="number" min="0" max="1000000000" step="any" inputmode="decimal"></label></div>
+        <div class="field-row"><label class="field">运保费<input name="transportCost" type="number" min="0" max="1000000000" step="any" inputmode="decimal"></label><label class="field">其他本单费用<input name="otherCost" type="number" min="0" max="1000000000" step="any" inputmode="decimal"></label></div>
+        <label class="evaluation-checkbox"><input name="costsComplete" type="checkbox"><span>已核对并计入本单由出口方承担的全部费用</span></label>
+        <label class="field">报价来源和交易条件<textarea name="sourceNote" maxlength="400" rows="2" placeholder="记录报价日期、来源、费用承担范围或仍待确认的项目"></textarea></label>
+        <h2>竞品与渠道记录</h2>
+        <label class="field">已了解的竞品或产品差异<textarea name="competitorNote" maxlength="500" rows="2" placeholder="只记录有依据的信息，例如同规格产品、包装或品质差异"></textarea></label>
+        <label class="field">采购方或渠道反馈<textarea name="buyerFeedback" maxlength="500" rows="2" placeholder="记录实际询价、规格要求或样品反馈，注明来源"></textarea></label>
+        <p class="field-hint">补充信息作为用户填写的资料参与测算，不自动视为已核实事实。</p>
+        <button id="evaluation-save" type="submit" class="primary-button">保存资料并更新评价</button>
+      </form>
+    </details>
+  </section>
+
+  <section id="history-view" class="view" hidden aria-labelledby="history-title">
+    <div class="result-heading"><div><p class="eyebrow">YOUR POLICY QUERIES</p><h1 id="history-title">查询记录</h1><p class="result-context">保存在当前浏览器，方便重新查看和修改查询。</p></div><button id="clear-history" class="secondary-button" type="button">清空记录</button></div>
+    <div id="history-list" class="history-list"></div>
+  </section>
+</main>
+<footer><span>AgriMatch AI <small>基于 2.7 · 政策查询版</small></span><p>产品 × 原产地 × 目标国家</p></footer>
+<div id="toast" role="status" aria-live="polite" hidden></div>
+
+<dialog id="country-picker" aria-labelledby="picker-title">
+  <div class="dialog-heading"><div><p class="eyebrow">DESTINATION COUNTRIES</p><h2 id="picker-title">选择目标国家</h2></div><button type="button" class="icon-button" id="close-picker" aria-label="关闭国家选择">×</button></div>
+  <div id="picker-modes" class="picker-modes" role="group" aria-label="国家浏览方式"><button type="button" data-picker-mode="continents" aria-pressed="true">按大洲 · 各10国</button><button type="button" data-picker-mode="organizations" aria-pressed="false">组织与合作机制</button></div>
+  <div id="organization-tabs" class="organization-tabs" role="group" aria-label="选择组织或合作机制" hidden></div>
+  <section id="picker-group-info" class="picker-group-info" aria-live="polite" hidden></section>
+  <label class="field search-field"><span class="sr-only">搜索国家</span><input id="country-search" placeholder="搜索国家名称或代码" type="search"></label>
+  <p id="picker-scope-note" class="picker-scope-note"></p>
+  <div class="picker-tools"><span id="picker-count" role="status"></span><div><button id="select-all-countries" class="text-button" type="button">选中当前列表</button><button id="clear-countries" class="text-button" type="button">清空已选</button></div></div>
+  <div id="country-options" class="country-options"></div>
+  <div class="dialog-footer"><button id="apply-countries" type="button" class="primary-button">完成选择</button></div>
+</dialog>
+<dialog id="about-dialog" aria-labelledby="about-title"><div class="dialog-heading"><h2 id="about-title">使用说明</h2><button type="button" class="icon-button" id="close-about" aria-label="关闭使用说明">×</button></div><div class="about-copy"><p>选择具体产品、产品形态、中国省级原产地和目标国家，查看与进口政策有关的资料。</p><p>全部92个国家均有准入与官方立场、关税与配额、监管要求、原产地专项政策、进口支持与产业政策、近期变化六个模块。</p><p>展开模块先看<strong>分类讨论结果</strong>：每种情形分别说明条件、处理结果与待确认项，再展示已有政策信息和原文。<strong>核对说明与检索记录默认折叠</strong>，可按需查看。</p><p><strong>一般规则</strong>介绍监管框架；产品相关条文必须有对应原文。条件未被证实时，讨论结果不代表已确认准入或优惠。</p><p>官方原文获取日期与政策生效日期分别显示。法规通知可能是草案，应查看正式文件。</p><p>下载摘要包含所选国家、原产地、分类结果和可用依据。查询记录保存在当前浏览器，清除浏览器数据会一并清除记录。</p><p id="model-status" class="field-hint"></p></div></dialog>
+</body>
+</html>

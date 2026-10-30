@@ -1,0 +1,1447 @@
+[
+  {
+    "country": "JPN",
+    "year": 2024,
+    "hs": "110429",
+    "url": "https://wits.worldbank.org/trade/comtrade/en/country/JPN/year/2024/tradeflow/Imports/partner/ALL/product/110429",
+    "retrievedAt": "2026-10-15T10:38:20.106Z",
+    "nomenclature": "HS 1988/92 (H0)",
+    "rows": [
+      {
+        "partner": "World",
+        "value": 27839770,
+        "netWeight": 34883800
+      },
+      {
+        "partner": "China",
+        "value": 26204270,
+        "netWeight": 33134900
+      },
+      {
+        "partner": "Kazakhstan",
+        "value": 909830,
+        "netWeight": 1052000
+      },
+      {
+        "partner": "Russian Federation",
+        "value": 449020,
+        "netWeight": 540000
+      },
+      {
+        "partner": "India",
+        "value": 121200,
+        "netWeight": 118417
+      },
+      {
+        "partner": "United States",
+        "value": 102570,
+        "netWeight": 13909
+      },
+      {
+        "partner": "Lithuania",
+        "value": 16990,
+        "netWeight": 8304
+      },
+      {
+        "partner": "Germany",
+        "value": 15400,
+        "netWeight": 8375
+      },
+      {
+        "partner": "Italy",
+        "value": 7620,
+        "netWeight": 2000
+      },
+      {
+        "partner": "Australia",
+        "value": 3900,
+        "netWeight": 1300
+      },
+      {
+        "partner": "South Africa",
+        "value": 3620,
+        "netWeight": 2000
+      },
+      {
+        "partner": "Canada",
+        "value": 3310,
+        "netWeight": 180
+      },
+      {
+        "partner": "United Arab Emirates",
+        "value": 2030,
+        "netWeight": 2500
+      }
+    ]
+  },
+  {
+    "country": "JPN",
+    "year": 2022,
+    "hs": "110429",
+    "url": "https://wits.worldbank.org/trade/comtrade/en/country/JPN/year/2022/tradeflow/Imports/partner/ALL/product/110429",
+    "retrievedAt": "2026-10-15T10:38:20.119Z",
+    "nomenclature": "HS 1988/92 (H0)",
+    "rows": [
+      {
+        "partner": "World",
+        "value": 45443860,
+        "netWeight": 38126200
+      },
+      {
+        "partner": "China",
+        "value": 43937890,
+        "netWeight": 36949600
+      },
+      {
+        "partner": "Russian Federation",
+        "value": 1046930,
+        "netWeight": 830044
+      },
+      {
+        "partner": "India",
+        "value": 217710,
+        "netWeight": 206649
+      },
+      {
+        "partner": "United States",
+        "value": 69040,
+        "netWeight": 11229
+      },
+      {
+        "partner": "Australia",
+        "value": 44640,
+        "netWeight": 34401
+      },
+      {
+        "partner": "Ukraine",
+        "value": 40940,
+        "netWeight": 48000
+      },
+      {
+        "partner": "Canada",
+        "value": 40530,
+        "netWeight": 19980
+      },
+      {
+        "partner": "United Kingdom",
+        "value": 23820,
+        "netWeight": 18000
+      },
+      {
+        "partner": "Germany",
+        "value": 15270,
+        "netWeight": 6750
+      },
+      {
+        "partner": "Italy",
+        "value": 7100,
+        "netWeight": 1540
+      }
+    ]
+  },
+  {
+    "country": "JPN",
+    "year": 2023,
+    "hs": "110429",
+    "url": "https://wits.worldbank.org/trade/comtrade/en/country/JPN/year/2023/tradeflow/Imports/partner/ALL/product/110429",
+    "retrievedAt": "2026-10-15T10:38:20.164Z",
+    "nomenclature": "HS 1988/92 (H0)",
+    "rows": [
+      {
+        "partner": "World",
+        "value": 46590840,
+        "netWeight": 44102400
+      },
+      {
+        "partner": "China",
+        "value": 43283130,
+        "netWeight": 40692200
+      },
+      {
+        "partner": "Russian Federation",
+        "value": 2934240,
+        "netWeight": 3160000
+      },
+      {
+        "partner": "India",
+        "value": 191960,
+        "netWeight": 193480
+      },
+      {
+        "partner": "United States",
+        "value": 109310,
+        "netWeight": 16557
+      },
+      {
+        "partner": "Ukraine",
+        "value": 21250,
+        "netWeight": 24000
+      },
+      {
+        "partner": "Germany",
+        "value": 14490,
+        "netWeight": 6875
+      },
+      {
+        "partner": "Canada",
+        "value": 12300,
+        "netWeight": 671
+      },
+      {
+        "partner": "Italy",
+        "value": 8690,
+        "netWeight": 2224
+      },
+      {
+        "partner": "Australia",
+        "value": 6200,
+        "netWeight": 2000
+      },
+      {
+        "partner": "South Africa",
+        "value": 3930,
+        "netWeight": 2000
+      },
+      {
+        "partner": "Peru",
+        "value": 3080,
+        "netWeight": 2000
+      },
+      {
+        "partner": "France",
+        "value": 2270,
+        "netWeight": 432
+      }
+    ]
+  },
+  {
+    "country": "USA",
+    "year": 2022,
+    "hs": "110429",
+    "url": "https://wits.worldbank.org/trade/comtrade/en/country/USA/year/2022/tradeflow/Imports/partner/ALL/product/110429",
+    "retrievedAt": "2026-10-15T10:38:20.479Z",
+    "nomenclature": "HS 1988/92 (H0)",
+    "rows": [
+      {
+        "partner": "World",
+        "value": 30506740,
+        "netWeight": 39385200
+      },
+      {
+        "partner": "Turkey",
+        "value": 14575360,
+        "netWeight": 22856500
+      },
+      {
+        "partner": "Canada",
+        "value": 8249160,
+        "netWeight": 12573000
+      },
+      {
+        "partner": "Italy",
+        "value": 3749270,
+        "netWeight": 1859980
+      },
+      {
+        "partner": "China",
+        "value": 1584120,
+        "netWeight": 808729
+      },
+      {
+        "partner": "India",
+        "value": 411450,
+        "netWeight": 235016
+      },
+      {
+        "partner": "Other Asia, nes",
+        "value": 358330,
+        "netWeight": 57021
+      },
+      {
+        "partner": "Peru",
+        "value": 340940,
+        "netWeight": 154092
+      },
+      {
+        "partner": "Ukraine",
+        "value": 225950,
+        "netWeight": 163718
+      },
+      {
+        "partner": "Australia",
+        "value": 201800,
+        "netWeight": 187409
+      },
+      {
+        "partner": "Russian Federation",
+        "value": 142820,
+        "netWeight": 88135
+      },
+      {
+        "partner": "Thailand",
+        "value": 102720,
+        "netWeight": 43926
+      },
+      {
+        "partner": "Germany",
+        "value": 82680,
+        "netWeight": 91558
+      },
+      {
+        "partner": "Korea, Rep.",
+        "value": 75830,
+        "netWeight": 16841
+      },
+      {
+        "partner": "Israel",
+        "value": 69880,
+        "netWeight": 47769
+      },
+      {
+        "partner": "Belgium",
+        "value": 43250,
+        "netWeight": 36300
+      },
+      {
+        "partner": "United Kingdom",
+        "value": 30290,
+        "netWeight": 27505
+      },
+      {
+        "partner": "Iraq",
+        "value": 27880,
+        "netWeight": 26488
+      },
+      {
+        "partner": "Spain",
+        "value": 27790,
+        "netWeight": 13589
+      },
+      {
+        "partner": "Haiti",
+        "value": 26820,
+        "netWeight": 14660
+      },
+      {
+        "partner": "Poland",
+        "value": 25600,
+        "netWeight": 22385
+      },
+      {
+        "partner": "Egypt, Arab Rep.",
+        "value": 23760,
+        "netWeight": 9110
+      },
+      {
+        "partner": "Hong Kong, China",
+        "value": 14070,
+        "netWeight": 1856
+      },
+      {
+        "partner": "Armenia",
+        "value": 13710,
+        "netWeight": 7996
+      },
+      {
+        "partner": "Colombia",
+        "value": 11120,
+        "netWeight": 2976
+      },
+      {
+        "partner": "Ecuador",
+        "value": 10920,
+        "netWeight": 6018
+      },
+      {
+        "partner": "Guatemala",
+        "value": 9760,
+        "netWeight": 3349
+      },
+      {
+        "partner": "Ghana",
+        "value": 9660,
+        "netWeight": 4000
+      },
+      {
+        "partner": "Tunisia",
+        "value": 9600,
+        "netWeight": 3681
+      },
+      {
+        "partner": "Bolivia",
+        "value": 7740,
+        "netWeight": 1943
+      },
+      {
+        "partner": "Senegal",
+        "value": 6580,
+        "netWeight": 3888
+      },
+      {
+        "partner": "Nicaragua",
+        "value": 6540,
+        "netWeight": 1824
+      },
+      {
+        "partner": "Jordan",
+        "value": 6430,
+        "netWeight": 1680
+      },
+      {
+        "partner": "Japan",
+        "value": 6140,
+        "netWeight": 1236
+      },
+      {
+        "partner": "Lithuania",
+        "value": 5890,
+        "netWeight": 5798
+      },
+      {
+        "partner": "Nepal",
+        "value": 5530,
+        "netWeight": 1712
+      },
+      {
+        "partner": "Slovak Republic",
+        "value": 4890,
+        "netWeight": 3200
+      },
+      {
+        "partner": "Ethiopia(excludes Eritrea)",
+        "value": 2460,
+        "netWeight": 300
+      }
+    ]
+  },
+  {
+    "country": "USA",
+    "year": 2023,
+    "hs": "110429",
+    "url": "https://wits.worldbank.org/trade/comtrade/en/country/USA/year/2023/tradeflow/Imports/partner/ALL/product/110429",
+    "retrievedAt": "2026-10-15T10:38:20.511Z",
+    "nomenclature": "HS 1988/92 (H0)",
+    "rows": [
+      {
+        "partner": "World",
+        "value": 28993800,
+        "netWeight": 42846200
+      },
+      {
+        "partner": "Turkey",
+        "value": 15938820,
+        "netWeight": 30218000
+      },
+      {
+        "partner": "Canada",
+        "value": 6887060,
+        "netWeight": 8985230
+      },
+      {
+        "partner": "Italy",
+        "value": 2812910,
+        "netWeight": 1537400
+      },
+      {
+        "partner": "China",
+        "value": 1093040,
+        "netWeight": 633355
+      },
+      {
+        "partner": "Germany",
+        "value": 555740,
+        "netWeight": 683000
+      },
+      {
+        "partner": "Other Asia, nes",
+        "value": 503610,
+        "netWeight": 79659
+      },
+      {
+        "partner": "India",
+        "value": 471030,
+        "netWeight": 283170
+      },
+      {
+        "partner": "Peru",
+        "value": 187520,
+        "netWeight": 85762
+      },
+      {
+        "partner": "Thailand",
+        "value": 78740,
+        "netWeight": 36766
+      },
+      {
+        "partner": "Iraq",
+        "value": 55490,
+        "netWeight": 78947
+      },
+      {
+        "partner": "Israel",
+        "value": 49930,
+        "netWeight": 51818
+      },
+      {
+        "partner": "Russian Federation",
+        "value": 48640,
+        "netWeight": 28469
+      },
+      {
+        "partner": "Ukraine",
+        "value": 43200,
+        "netWeight": 27128
+      },
+      {
+        "partner": "Ethiopia(excludes Eritrea)",
+        "value": 32670,
+        "netWeight": 6099
+      },
+      {
+        "partner": "Korea, Rep.",
+        "value": 31030,
+        "netWeight": 7591
+      },
+      {
+        "partner": "Haiti",
+        "value": 25440,
+        "netWeight": 19044
+      },
+      {
+        "partner": "Australia",
+        "value": 22450,
+        "netWeight": 5022
+      },
+      {
+        "partner": "Armenia",
+        "value": 18380,
+        "netWeight": 9502
+      },
+      {
+        "partner": "Nicaragua",
+        "value": 18340,
+        "netWeight": 4665
+      },
+      {
+        "partner": "Ecuador",
+        "value": 17210,
+        "netWeight": 8437
+      },
+      {
+        "partner": "Kazakhstan",
+        "value": 16230,
+        "netWeight": 9216
+      },
+      {
+        "partner": "United Kingdom",
+        "value": 15730,
+        "netWeight": 13000
+      },
+      {
+        "partner": "Guatemala",
+        "value": 13730,
+        "netWeight": 4609
+      },
+      {
+        "partner": "Rwanda",
+        "value": 12160,
+        "netWeight": 6200
+      },
+      {
+        "partner": "Bolivia",
+        "value": 8520,
+        "netWeight": 2462
+      },
+      {
+        "partner": "Uzbekistan",
+        "value": 7710,
+        "netWeight": 5000
+      },
+      {
+        "partner": "Dominican Republic",
+        "value": 5150,
+        "netWeight": 1180
+      },
+      {
+        "partner": "Lithuania",
+        "value": 5050,
+        "netWeight": 448
+      },
+      {
+        "partner": "Nigeria",
+        "value": 3890,
+        "netWeight": 8180
+      },
+      {
+        "partner": "Belgium",
+        "value": 3810,
+        "netWeight": 1080
+      },
+      {
+        "partner": "Nepal",
+        "value": 3250,
+        "netWeight": 1391
+      },
+      {
+        "partner": "Jordan",
+        "value": 2590,
+        "netWeight": 218
+      },
+      {
+        "partner": "Netherlands",
+        "value": 2370,
+        "netWeight": 3742
+      },
+      {
+        "partner": "Hong Kong, China",
+        "value": 2340,
+        "netWeight": 352
+      }
+    ]
+  },
+  {
+    "country": "DEU",
+    "year": 2022,
+    "hs": "110429",
+    "url": "https://wits.worldbank.org/trade/comtrade/en/country/DEU/year/2022/tradeflow/Imports/partner/ALL/product/110429",
+    "retrievedAt": "2026-10-15T10:38:20.858Z",
+    "nomenclature": "HS 1988/92 (H0)",
+    "rows": [
+      {
+        "partner": "World",
+        "value": 22803310,
+        "netWeight": 16722600
+      },
+      {
+        "partner": "Lithuania",
+        "value": 5774810,
+        "netWeight": 3214120
+      },
+      {
+        "partner": "Poland",
+        "value": 5279630,
+        "netWeight": 3916480
+      },
+      {
+        "partner": "Austria",
+        "value": 3160460,
+        "netWeight": 2897990
+      },
+      {
+        "partner": "China",
+        "value": 2515290,
+        "netWeight": 1455890
+      },
+      {
+        "partner": "Russian Federation",
+        "value": 1628940,
+        "netWeight": 968405
+      },
+      {
+        "partner": "Ukraine",
+        "value": 837320,
+        "netWeight": 867008
+      },
+      {
+        "partner": "Netherlands",
+        "value": 682950,
+        "netWeight": 563118
+      },
+      {
+        "partner": "Belgium",
+        "value": 555020,
+        "netWeight": 1070160
+      },
+      {
+        "partner": "Italy",
+        "value": 448650,
+        "netWeight": 232288
+      },
+      {
+        "partner": "Turkey",
+        "value": 430040,
+        "netWeight": 458400
+      },
+      {
+        "partner": "Moldova",
+        "value": 292260,
+        "netWeight": 198276
+      },
+      {
+        "partner": "Peru",
+        "value": 216700,
+        "netWeight": 118437
+      },
+      {
+        "partner": "Czech Republic",
+        "value": 198220,
+        "netWeight": 142430
+      },
+      {
+        "partner": "Kazakhstan",
+        "value": 162910,
+        "netWeight": 89671
+      },
+      {
+        "partner": "Hungary",
+        "value": 112190,
+        "netWeight": 191390
+      },
+      {
+        "partner": "Denmark",
+        "value": 81920,
+        "netWeight": 94613
+      },
+      {
+        "partner": "France",
+        "value": 72570,
+        "netWeight": 39842
+      },
+      {
+        "partner": "Switzerland",
+        "value": 69500,
+        "netWeight": 29533
+      },
+      {
+        "partner": "Syrian Arab Republic",
+        "value": 61460,
+        "netWeight": 19181
+      },
+      {
+        "partner": "Latvia",
+        "value": 45480,
+        "netWeight": 36773
+      },
+      {
+        "partner": "Bulgaria",
+        "value": 38990,
+        "netWeight": 33731
+      },
+      {
+        "partner": "Slovak Republic",
+        "value": 30270,
+        "netWeight": 23000
+      },
+      {
+        "partner": "Ireland",
+        "value": 18730,
+        "netWeight": 4000
+      },
+      {
+        "partner": "Spain",
+        "value": 18140,
+        "netWeight": 1286
+      },
+      {
+        "partner": "Brazil",
+        "value": 14590,
+        "netWeight": 8500
+      },
+      {
+        "partner": "Vietnam",
+        "value": 12150,
+        "netWeight": 1845
+      },
+      {
+        "partner": "Romania",
+        "value": 11890,
+        "netWeight": 6685
+      },
+      {
+        "partner": "Korea, Rep.",
+        "value": 8830,
+        "netWeight": 2402
+      },
+      {
+        "partner": "Luxembourg",
+        "value": 6150,
+        "netWeight": 26420
+      },
+      {
+        "partner": "Iran, Islamic Rep.",
+        "value": 6080,
+        "netWeight": 5183
+      },
+      {
+        "partner": "Sweden",
+        "value": 4090,
+        "netWeight": 1693
+      },
+      {
+        "partner": "Thailand",
+        "value": 3390,
+        "netWeight": 1260
+      },
+      {
+        "partner": "Greece",
+        "value": 1430,
+        "netWeight": 1665
+      },
+      {
+        "partner": "United Kingdom",
+        "value": 1040,
+        "netWeight": 382
+      },
+      {
+        "partner": "India",
+        "value": 640,
+        "netWeight": 412
+      },
+      {
+        "partner": "Israel",
+        "value": 540,
+        "netWeight": 161
+      },
+      {
+        "partner": "Norway",
+        "value": 0,
+        "netWeight": 2
+      },
+      {
+        "partner": "Kenya",
+        "value": 0,
+        "netWeight": 1
+      }
+    ]
+  },
+  {
+    "country": "DEU",
+    "year": 2024,
+    "hs": "110429",
+    "url": "https://wits.worldbank.org/trade/comtrade/en/country/DEU/year/2024/tradeflow/Imports/partner/ALL/product/110429",
+    "retrievedAt": "2026-10-15T10:38:21.206Z",
+    "nomenclature": "HS 1988/92 (H0)",
+    "rows": [
+      {
+        "partner": "World",
+        "value": 22359530,
+        "netWeight": 24550200
+      },
+      {
+        "partner": "Poland",
+        "value": 4992510,
+        "netWeight": 4180710
+      },
+      {
+        "partner": "Lithuania",
+        "value": 3999350,
+        "netWeight": 4599890
+      },
+      {
+        "partner": "Austria",
+        "value": 3444730,
+        "netWeight": 3438990
+      },
+      {
+        "partner": "Ukraine",
+        "value": 1719110,
+        "netWeight": 2240440
+      },
+      {
+        "partner": "China",
+        "value": 1439440,
+        "netWeight": 1076640
+      },
+      {
+        "partner": "Russian Federation",
+        "value": 1382380,
+        "netWeight": 1536270
+      },
+      {
+        "partner": "Turkey",
+        "value": 776610,
+        "netWeight": 860071
+      },
+      {
+        "partner": "Denmark",
+        "value": 682970,
+        "netWeight": 631718
+      },
+      {
+        "partner": "Netherlands",
+        "value": 603510,
+        "netWeight": 933242
+      },
+      {
+        "partner": "Bulgaria",
+        "value": 575460,
+        "netWeight": 1327610
+      },
+      {
+        "partner": "Czech Republic",
+        "value": 443740,
+        "netWeight": 648147
+      },
+      {
+        "partner": "Italy",
+        "value": 416680,
+        "netWeight": 396596
+      },
+      {
+        "partner": "Belgium",
+        "value": 361760,
+        "netWeight": 486846
+      },
+      {
+        "partner": "Latvia",
+        "value": 318100,
+        "netWeight": 536390
+      },
+      {
+        "partner": "Slovenia",
+        "value": 287130,
+        "netWeight": 170035
+      },
+      {
+        "partner": "Slovak Republic",
+        "value": 215310,
+        "netWeight": 631620
+      },
+      {
+        "partner": "Peru",
+        "value": 194980,
+        "netWeight": 104000
+      },
+      {
+        "partner": "Hungary",
+        "value": 176240,
+        "netWeight": 352521
+      },
+      {
+        "partner": "Moldova",
+        "value": 129860,
+        "netWeight": 122976
+      },
+      {
+        "partner": "France",
+        "value": 59990,
+        "netWeight": 172979
+      },
+      {
+        "partner": "Kazakhstan",
+        "value": 41140,
+        "netWeight": 56336
+      },
+      {
+        "partner": "Canada",
+        "value": 22880,
+        "netWeight": 6853
+      },
+      {
+        "partner": "Ireland",
+        "value": 17600,
+        "netWeight": 4002
+      },
+      {
+        "partner": "Switzerland",
+        "value": 9730,
+        "netWeight": 4239
+      },
+      {
+        "partner": "Iraq",
+        "value": 6580,
+        "netWeight": 5550
+      },
+      {
+        "partner": "Iran, Islamic Rep.",
+        "value": 6190,
+        "netWeight": 4332
+      },
+      {
+        "partner": "Jordan",
+        "value": 5970,
+        "netWeight": 5509
+      },
+      {
+        "partner": "Korea, Rep.",
+        "value": 5090,
+        "netWeight": 1070
+      },
+      {
+        "partner": "Syrian Arab Republic",
+        "value": 4410,
+        "netWeight": 5825
+      },
+      {
+        "partner": "Egypt, Arab Rep.",
+        "value": 3520,
+        "netWeight": 1517
+      },
+      {
+        "partner": "India",
+        "value": 3000,
+        "netWeight": 2960
+      },
+      {
+        "partner": "Tanzania",
+        "value": 2560,
+        "netWeight": 277
+      },
+      {
+        "partner": "Sweden",
+        "value": 2280,
+        "netWeight": 518
+      },
+      {
+        "partner": "United Kingdom",
+        "value": 2260,
+        "netWeight": 249
+      },
+      {
+        "partner": "Occ.Pal.Terr",
+        "value": 1870,
+        "netWeight": 550
+      },
+      {
+        "partner": "Other Asia, nes",
+        "value": 1720,
+        "netWeight": 432
+      },
+      {
+        "partner": "Greece",
+        "value": 730,
+        "netWeight": 687
+      },
+      {
+        "partner": "Lebanon",
+        "value": 630,
+        "netWeight": 315
+      },
+      {
+        "partner": "Spain",
+        "value": 510,
+        "netWeight": 750
+      },
+      {
+        "partner": "Romania",
+        "value": 480,
+        "netWeight": 310
+      },
+      {
+        "partner": "Vietnam",
+        "value": 240,
+        "netWeight": 72
+      },
+      {
+        "partner": "Israel",
+        "value": 230,
+        "netWeight": 60
+      },
+      {
+        "partner": "United States",
+        "value": 60,
+        "netWeight": 68
+      },
+      {
+        "partner": "Norway",
+        "value": 0,
+        "netWeight": 1
+      }
+    ]
+  },
+  {
+    "country": "USA",
+    "year": 2024,
+    "hs": "110429",
+    "url": "https://wits.worldbank.org/trade/comtrade/en/country/USA/year/2024/tradeflow/Imports/partner/ALL/product/110429",
+    "retrievedAt": "2026-10-15T10:38:21.254Z",
+    "nomenclature": "HS 1988/92 (H0)",
+    "rows": [
+      {
+        "partner": "World",
+        "value": 21697790,
+        "netWeight": 32247100
+      },
+      {
+        "partner": "Turkey",
+        "value": 8151820,
+        "netWeight": 19075800
+      },
+      {
+        "partner": "Canada",
+        "value": 7461690,
+        "netWeight": 9862500
+      },
+      {
+        "partner": "Italy",
+        "value": 2709340,
+        "netWeight": 1538010
+      },
+      {
+        "partner": "China",
+        "value": 968010,
+        "netWeight": 541363
+      },
+      {
+        "partner": "India",
+        "value": 765620,
+        "netWeight": 491632
+      },
+      {
+        "partner": "Peru",
+        "value": 493250,
+        "netWeight": 167274
+      },
+      {
+        "partner": "Other Asia, nes",
+        "value": 406600,
+        "netWeight": 63983
+      },
+      {
+        "partner": "Thailand",
+        "value": 154230,
+        "netWeight": 67426
+      },
+      {
+        "partner": "Ukraine",
+        "value": 83700,
+        "netWeight": 94883
+      },
+      {
+        "partner": "Israel",
+        "value": 65300,
+        "netWeight": 103401
+      },
+      {
+        "partner": "Korea, Rep.",
+        "value": 60980,
+        "netWeight": 16815
+      },
+      {
+        "partner": "Russian Federation",
+        "value": 50490,
+        "netWeight": 38574
+      },
+      {
+        "partner": "Australia",
+        "value": 41470,
+        "netWeight": 13037
+      },
+      {
+        "partner": "Bolivia",
+        "value": 38510,
+        "netWeight": 11044
+      },
+      {
+        "partner": "Germany",
+        "value": 36500,
+        "netWeight": 40000
+      },
+      {
+        "partner": "United Kingdom",
+        "value": 26460,
+        "netWeight": 23000
+      },
+      {
+        "partner": "Nicaragua",
+        "value": 24270,
+        "netWeight": 9849
+      },
+      {
+        "partner": "Jordan",
+        "value": 21690,
+        "netWeight": 6270
+      },
+      {
+        "partner": "Ecuador",
+        "value": 21340,
+        "netWeight": 12501
+      },
+      {
+        "partner": "Belgium",
+        "value": 19950,
+        "netWeight": 5296
+      },
+      {
+        "partner": "Iraq",
+        "value": 17730,
+        "netWeight": 18301
+      },
+      {
+        "partner": "Armenia",
+        "value": 17230,
+        "netWeight": 14746
+      },
+      {
+        "partner": "Guatemala",
+        "value": 11270,
+        "netWeight": 3940
+      },
+      {
+        "partner": "Ethiopia(excludes Eritrea)",
+        "value": 6300,
+        "netWeight": 1066
+      },
+      {
+        "partner": "Honduras",
+        "value": 6250,
+        "netWeight": 1882
+      },
+      {
+        "partner": "Morocco",
+        "value": 5790,
+        "netWeight": 7000
+      },
+      {
+        "partner": "Kazakhstan",
+        "value": 5080,
+        "netWeight": 4860
+      },
+      {
+        "partner": "New Zealand",
+        "value": 4640,
+        "netWeight": 210
+      },
+      {
+        "partner": "Hong Kong, China",
+        "value": 4290,
+        "netWeight": 590
+      },
+      {
+        "partner": "United Arab Emirates",
+        "value": 3730,
+        "netWeight": 2903
+      },
+      {
+        "partner": "El Salvador",
+        "value": 3700,
+        "netWeight": 847
+      },
+      {
+        "partner": "Haiti",
+        "value": 3270,
+        "netWeight": 5000
+      },
+      {
+        "partner": "Vietnam",
+        "value": 2450,
+        "netWeight": 497
+      },
+      {
+        "partner": "Poland",
+        "value": 2420,
+        "netWeight": 1596
+      },
+      {
+        "partner": "Nepal",
+        "value": 2390,
+        "netWeight": 999
+      }
+    ]
+  },
+  {
+    "country": "DEU",
+    "year": 2023,
+    "hs": "110429",
+    "url": "https://wits.worldbank.org/trade/comtrade/en/country/DEU/year/2023/tradeflow/Imports/partner/ALL/product/110429",
+    "retrievedAt": "2026-10-15T10:38:21.551Z",
+    "nomenclature": "HS 1988/92 (H0)",
+    "rows": [
+      {
+        "partner": "World",
+        "value": 20130750,
+        "netWeight": 15669300
+      },
+      {
+        "partner": "Poland",
+        "value": 5555530,
+        "netWeight": 3755650
+      },
+      {
+        "partner": "Lithuania",
+        "value": 4412910,
+        "netWeight": 3060320
+      },
+      {
+        "partner": "Austria",
+        "value": 2895350,
+        "netWeight": 2345140
+      },
+      {
+        "partner": "Russian Federation",
+        "value": 1555300,
+        "netWeight": 1395730
+      },
+      {
+        "partner": "China",
+        "value": 1465780,
+        "netWeight": 1007990
+      },
+      {
+        "partner": "Ukraine",
+        "value": 1349120,
+        "netWeight": 1243110
+      },
+      {
+        "partner": "Turkey",
+        "value": 548500,
+        "netWeight": 571507
+      },
+      {
+        "partner": "Netherlands",
+        "value": 441520,
+        "netWeight": 434843
+      },
+      {
+        "partner": "Hungary",
+        "value": 381090,
+        "netWeight": 478069
+      },
+      {
+        "partner": "Czech Republic",
+        "value": 289400,
+        "netWeight": 307014
+      },
+      {
+        "partner": "Italy",
+        "value": 204570,
+        "netWeight": 152522
+      },
+      {
+        "partner": "Belgium",
+        "value": 194730,
+        "netWeight": 209851
+      },
+      {
+        "partner": "Moldova",
+        "value": 178930,
+        "netWeight": 153245
+      },
+      {
+        "partner": "Peru",
+        "value": 138790,
+        "netWeight": 60141
+      },
+      {
+        "partner": "Slovenia",
+        "value": 132760,
+        "netWeight": 76032
+      },
+      {
+        "partner": "Latvia",
+        "value": 90970,
+        "netWeight": 137544
+      },
+      {
+        "partner": "Denmark",
+        "value": 73990,
+        "netWeight": 80035
+      },
+      {
+        "partner": "Canada",
+        "value": 32610,
+        "netWeight": 10022
+      },
+      {
+        "partner": "France",
+        "value": 31070,
+        "netWeight": 67720
+      },
+      {
+        "partner": "Kazakhstan",
+        "value": 29080,
+        "netWeight": 15612
+      },
+      {
+        "partner": "Bulgaria",
+        "value": 27730,
+        "netWeight": 43137
+      },
+      {
+        "partner": "Switzerland",
+        "value": 19870,
+        "netWeight": 6279
+      },
+      {
+        "partner": "Syrian Arab Republic",
+        "value": 16340,
+        "netWeight": 4013
+      },
+      {
+        "partner": "Brazil",
+        "value": 9960,
+        "netWeight": 5100
+      },
+      {
+        "partner": "Ireland",
+        "value": 9870,
+        "netWeight": 2000
+      },
+      {
+        "partner": "Slovak Republic",
+        "value": 9770,
+        "netWeight": 25200
+      },
+      {
+        "partner": "Kyrgyz Republic",
+        "value": 9600,
+        "netWeight": 8640
+      },
+      {
+        "partner": "Sweden",
+        "value": 4630,
+        "netWeight": 1036
+      },
+      {
+        "partner": "Iran, Islamic Rep.",
+        "value": 4380,
+        "netWeight": 2674
+      },
+      {
+        "partner": "Jordan",
+        "value": 4340,
+        "netWeight": 3881
+      },
+      {
+        "partner": "Other Asia, nes",
+        "value": 3530,
+        "netWeight": 1035
+      },
+      {
+        "partner": "Korea, Rep.",
+        "value": 2600,
+        "netWeight": 486
+      },
+      {
+        "partner": "Vietnam",
+        "value": 1560,
+        "netWeight": 177
+      },
+      {
+        "partner": "Lebanon",
+        "value": 1260,
+        "netWeight": 1737
+      },
+      {
+        "partner": "Greece",
+        "value": 1040,
+        "netWeight": 990
+      },
+      {
+        "partner": "United Kingdom",
+        "value": 1000,
+        "netWeight": 112
+      },
+      {
+        "partner": "Romania",
+        "value": 660,
+        "netWeight": 665
+      },
+      {
+        "partner": "Spain",
+        "value": 590,
+        "netWeight": 83
+      },
+      {
+        "partner": "Cyprus",
+        "value": 0,
+        "netWeight": 1
+      },
+      {
+        "partner": "Luxembourg",
+        "value": 0,
+        "netWeight": 2
+      }
+    ]
+  }
+]
